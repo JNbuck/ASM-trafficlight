@@ -1,6 +1,5 @@
 ### ASM大赛开发文档遇到问题的总结
 
-![5BY2L2[`W9AW$2VY%`Z%LBC](C:\Users\JBuck\Desktop\ASM-traffic-light\5BY2L2[`W9AW$2VY%`Z%LBC.jpg)
 
 1. 开发环境
 
@@ -39,3 +38,5 @@
    >    			3. 没有将Graphviz2.39\bin添加到系统变量path
    >
    > 终极解决方法：使用管理员权限打开pycharm，报错来自于pycharm无法调用C盘graphviz的权限
+   
+4.模型数据的下载将会放在百度云，后续链接会放上来
