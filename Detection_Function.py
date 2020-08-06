@@ -1,7 +1,7 @@
 import tensorflow as tf
 from yad2k.models.keras_yolo import yolo_boxes_to_corners
 from DrawBoxes_Function import *
-"该文件包含执行yolo算法的一系列算法，以及识别到的人或车数量的统计和输出"
+"该文件包含执行yolo算法的一系列算法，以及识别到的人或车数量的统计与输出"
 
 
 def yolo_filter_boxes(box_confidence, boxes, box_class_probs, threshold = .6):
