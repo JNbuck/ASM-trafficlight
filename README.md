@@ -39,4 +39,6 @@
    >
    > 终极解决方法：使用管理员权限打开pycharm，报错来自于pycharm无法调用C盘graphviz的权限
    
-4.模型数据的下载将会放在百度云，后续链接会放上来
+4.模型数据的下载将会放在百度云，这个完整的data文件，请把github上没有的部分也就是.h文件放入其中
+ > 链接：https://pan.baidu.com/s/1W4h3jXRFJzFO2jRBk8az5w 
+提取码：ig3v
