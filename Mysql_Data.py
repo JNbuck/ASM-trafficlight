@@ -18,4 +18,3 @@ def connection(database_key):
 
     return mysql
 
-
