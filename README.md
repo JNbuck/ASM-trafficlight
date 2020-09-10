@@ -22,7 +22,7 @@
 
 ** ASM题目之一：红绿灯智能算法问题 ** 
 
-![problem](*\images\problem.jpg)
+![problem](https://github.com/JNbuck/ASM-trafficlight/blob/master/images/problem.jpg)
 
 ## 安装方法
 
