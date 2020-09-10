@@ -20,9 +20,9 @@
 
 ## 背景
 
-**ASM题目之一：红绿灯智能算法问题 ** 
+** ASM题目之一：红绿灯智能算法问题 ** 
 
-![problem](images\problem.jpg)
+![problem](*\images\problem.jpg)
 
 ## 安装方法
 
