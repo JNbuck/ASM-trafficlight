@@ -20,7 +20,7 @@
 
 ## 背景
 
-** ASM题目之一：红绿灯智能算法问题 ** 
+**ASM题目之一：红绿灯智能算法问题** 
 
 ![problem](https://github.com/JNbuck/ASM-trafficlight/blob/master/images/problem.jpg)
 
