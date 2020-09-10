@@ -52,27 +52,30 @@
 
 ## 维护者
 
+@[**Ho-george**](https://github.com/Ho-george)
 
-
-
+@[**JNbuck** Junduo Xu](https://github.com/JNbuck)
 
 ## 贡献
 
-
-
-
+**希望以后有贡献**
 
 ## 联系交流方式
 
+**技术疑问交流**
 
+>QQ交流群 ： 
+>
+>作者博客：
+>
+>requestes作者！！！
 
 
 
 ## LICENSE
 
-
-
-
+* 个人学习使用遵循GPL开源协议
+* 商用需联系作者授权
 
 
 
