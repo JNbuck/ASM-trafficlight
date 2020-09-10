@@ -39,17 +39,16 @@
 >
 >   通过百度网盘下载得到该yolo.h5文件，该文件是该yolo目标识别模型的参数集，将该文件放置在根目录model_data文件夹中即可
 >
-> * 运行TrafficLight_Running.py文件即可启动该程序
-
-
+> * 安装mysql数据库，并保持该数据库处于启动状态，下载以下链接内的数据库，并导入到mysql数据库中
+>
+>   >链接：https://pan.baidu.com/s/1vMj8xAWhWUx_kQsoz6m7zQ 
+>   >提取码：wytu
 
 ## 使用方法
 
-
-
-
-
-
+>* 运行TrafficLight_Running.py文件即可启动该红绿灯程序
+>* 在TrafficLight_Running.py文件中，有个主程序main，将其中的connection中的test改为test1，即可登录作者的数据库进行访问，目前该方法无法使用，因为作者还在申请固定域名。
+>* 使用DrawBoxes_Function中的已经写好的完整方法可以实现实时监测，请自行添加到main方法中运行
 
 ## 维护者
 
