@@ -20,13 +20,26 @@
 
 ## 背景
 
+**ASM题目之一：红绿灯智能算法问题 ** 
 
-
-
+![problem](images\problem.jpg)
 
 ## 安装方法
 
+由于目前只是测试性程序，如果需要使程序稳定运行在本机可以使用以下方法
 
+> * 使用该文件前，需要在使用设备上安装环境，包括tensorflow开发环境，keras开发环境，opencv包等一系列环境，使用pip便捷安装即可
+>
+> * 将本项目使用`git clone SSH路径`克隆到使用的设备上
+>
+> * 由于模型数据过大，已经将模型数据放置在百度网盘
+>
+>   >链接：https://pan.baidu.com/s/1lMK9qDhdIT3Rd64uPh2IFw 
+>   >提取码：umny
+>
+>   通过百度网盘下载得到该yolo.h5文件，该文件是该yolo目标识别模型的参数集，将该文件放置在根目录model_data文件夹中即可
+>
+> * 运行TrafficLight_Running.py文件即可启动该程序
 
 
 
