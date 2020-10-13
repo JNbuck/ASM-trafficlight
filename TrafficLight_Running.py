@@ -2,11 +2,11 @@ from yad2k.models.keras_yolo import yolo_head
 from keras.models import load_model
 from Detection_Function import *
 from TrafficLight_Function import *
-from Mysql_Data import *  #目前只导入登录程序,和数据库操作程序,后续补充完方法后完全导入
+from Mysql_Data import *  # 目前只导入登录程序,和数据库操作程序,后续补充完方法后完全导入
 
 "该文件为程序线程执行文件，可以在此修改进程"
 
-def main():
+def main_1():
 
     sess = K.get_session()
 
@@ -24,11 +24,11 @@ def main():
 
     scores, boxes, classes = yolo_eval(yolo_outputs, image_shape)
 
-    #以上为框架启动 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-    #下面为线程执行 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    # 以上为框架启动 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    # 下面为线程执行 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     print('主线程开始时间：{}\n\n\n'.format(time.strftime("%Y-%m-%d %H:%M:%S")))
-    #print("-----------------------------------------------------------------------------------------------------------")
+    # print("-----------------------------------------------------------------------------------------------------------")
 
     yellow_time = threading.Thread(target=task_thread1, name='T1')
     yellow_time.start()
@@ -38,7 +38,7 @@ def main():
     persones = only_detection_number(sess, 'persones',yolo_model,scores,boxes,classes,class_names)
     # 添加人行道绿灯算法
     t = Person_green_light(persones, 10, 1.2)
-    #数据库语句
+    # 数据库语句
     cursor.execute("insert into lightdata(dtime,lno,dnumber) values(%s,%s,%s)",(time.strftime("%Y-%m-%d"),1,persones))
 
     print('行人识别结束时间：{}\n\n\n'.format(time.strftime("%Y-%m-%d %H:%M:%S")))
@@ -68,9 +68,28 @@ def main():
     # 数据库语句
     cars_green_time.join()  # 主程序暂停等待次程序执行完毕
 
-    #print("----------------------------------------------------------------------------------------------------------")
+    # print("----------------------------------------------------------------------------------------------------------")
     print('主线程结束时间：{}\n\n\n'.format(time.strftime("%Y-%m-%d %H:%M:%S")))
 
+
+def main_2():
+    sess = K.get_session()
+
+    class_names = read_classes("model_data/coco_classes.txt")
+    anchors = read_anchors("model_data/yolo_anchors.txt")
+    image_shape = (480., 640.)
+    # 该电脑的摄像头像素为（480，640）
+
+    yolo_model = load_model("model_data/yolo.h5")
+
+    # 查看层数
+    # yolo_model.summary()
+
+    yolo_outputs = yolo_head(yolo_model.output, anchors, len(class_names))
+
+    scores, boxes, classes = yolo_eval(yolo_outputs, image_shape)
+
+    predict_current_time(sess, scores, boxes, classes, yolo_model, class_names)
 
 
 if __name__ == '__main__':
@@ -85,17 +104,19 @@ if __name__ == '__main__':
     cycles = int(input('the cycles index :'))  # 模拟循环次数
     count = 0
     while True:
-        main()
+        main_1()
         count += 1
         if count == cycles:
             break
 
-    ##以倒序显示后四条data数据
-    #cursor.execute("select * from lightdata order by dno limit 0,4")
-    #print(cursor.fetchall())
+    # 以倒序显示后四条data数据
+    # cursor.execute("select * from lightdata order by dno limit 0,4")
+    # print(cursor.fetchall())
 
-    #关闭数据库操作游标
+    # 关闭数据库操作游标
     cursor.close()
-    #关闭数据库连接
+    # 关闭数据库连接
     conn.close()
+
+    # main_2()
 
