@@ -6,7 +6,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/JNbuck/ASM-trafficlight?style=social)](https://github.com/JNbuck/ASM-trafficlight)
 [![GitHub forks](https://img.shields.io/github/forks/JNbuck/ASM-trafficlight?style=social)](https://github.com/JNbuck/ASM-trafficlight)
 
-> 这是作者参加ASM期间为了方便代码管理而创建的开源项目，希望其他参赛队伍不要盗用
+> 这是作者参加ASM期间为了方便代码管理而创建的开源项目，希望其他参赛队伍不要盗用，为防止盗用，在2020.10.24决赛之前，数据都将隐藏，作者将会在10.24后公开数据。
 
 ## 目录
 
@@ -34,8 +34,8 @@
 >
 > * 由于模型数据过大，已经将模型数据放置在百度网盘
 >
->   >链接：https://pan.baidu.com/s/1lMK9qDhdIT3Rd64uPh2IFw 
->   >提取码：umny
+>   >链接：
+>   >提取码：
 >
 >   通过百度网盘下载得到该yolo.h5文件，该文件是该yolo目标识别模型的参数集，将该文件放置在根目录model_data文件夹中即可
 >
