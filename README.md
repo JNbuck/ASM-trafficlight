@@ -6,7 +6,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/JNbuck/ASM-trafficlight?style=social)](https://github.com/JNbuck/ASM-trafficlight)
 [![GitHub forks](https://img.shields.io/github/forks/JNbuck/ASM-trafficlight?style=social)](https://github.com/JNbuck/ASM-trafficlight)
 
-> 这是作者参加ASM期间为了方便代码管理而创建的开源项目
+> 这是作者参加ASM期间为了方便代码管理而创建的开源项目，希望其他参赛队伍不要盗用
 
 ## 目录
 
