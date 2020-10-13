@@ -41,8 +41,9 @@
 >
 > * 安装mysql数据库，并保持该数据库处于启动状态，下载以下链接内的数据库，并导入到mysql数据库中
 >
->   >链接：https://pan.baidu.com/s/1vMj8xAWhWUx_kQsoz6m7zQ 
->   >提取码：wytu
+>   >链接：
+>   >提取码：
+
 
 ## 使用方法
 
